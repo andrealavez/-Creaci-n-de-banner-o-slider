@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T7Y654JMBB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T7Y654JMBB');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maquetación con divs</title>
@@ -14,6 +23,7 @@
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+
 <body>
 
     <header>
@@ -224,5 +234,18 @@
     </footer>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="banner/banner.js"></script>
+<script>
+let visitas = localStorage.getItem("visitas");
+
+if(visitas == null){
+    visitas = 0;
+}
+
+visitas++;
+
+localStorage.setItem("visitas", visitas);
+
+document.write("Visitas: " + visitas);
+</script>
 </body>
 </html>
